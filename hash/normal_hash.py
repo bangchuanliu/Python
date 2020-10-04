@@ -1,19 +1,19 @@
-from hashlib import md5
-from struct import unpack_from
-ITEMS = 10000000
-NODES = 100
+from hash import hash 
 
-node_count = [0] * NODES
+items = 1_000_000
+nodes = 100
+nodes2 = 101
+node_count = [0] * nodes
 
-for item in range(ITEMS):
-    k = md5(str(item).encode("utf-8")).digest()
-    h = unpack_from(">I",k)[0]
-    node_count[h % NODES]+=1
+change = 0
 
-average = ITEMS / NODES
-max = max(node_count)
-min = min(node_count)
+for item in range(items):
+    h = hash(item)
+    node_count[h % nodes]+=1
+    if h % nodes != h % nodes2:
+        change += 1
 
-print(average)
-print(max)
-print(min)
+print(f"change rate is {change * 100/items}%")
+print(f"average number of items in a node is {items/nodes}")
+print(f"max number of items in a node is {max(node_count)}")
+print(f"min number of items in a node is {min(node_count)}")
