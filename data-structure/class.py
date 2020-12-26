@@ -3,7 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
-def printList(node):
+def print_list(node):
     while node:
         print(node.data, end = "-->")
         node = node.next
@@ -13,4 +13,4 @@ node = Node(1)
 node2 = Node(2)
 node.next = node2
 
-printList(node)
+print_list(node)
