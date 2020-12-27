@@ -1,12 +1,13 @@
 class Node:
-    def __init__ (self, data):
+    def __init__(self, data):
         self.data = data
         self.next = None
 
-def print_list(node):
-    while node:
-        print(node.data, end = "-->")
-        node = node.next
+
+def print_list(head):
+    while head:
+        print(head.data, end="-->")
+        head = head.next
 
 
 node = Node(1)

@@ -10,7 +10,6 @@ There are 3 ways to read data from stdin
 
 import sys, fileinput
 
-
 # sys.stdin
 
 for line in sys.stdin:
@@ -18,7 +17,6 @@ for line in sys.stdin:
         break
     a, b, c = line.rstrip().split()
     print(int(a) + int(b) + int(c))
-
 
 # input()
 

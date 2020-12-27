@@ -1,12 +1,9 @@
-list = [1, 2, 3]
+# filter, map, reduce
 
+arr = [1, 2, 3]
 
-def mapTo(f, list):
-    for i in range(len(list)):
-        list[i] = f(list[i])
-    return list
+result = map(lambda x: x + 1, arr)
+print(list(result))
 
-
-list2 = mapTo(lambda x: x + 1, list)
-
-print(list2)
+result2 = filter(lambda x: x % 2 == 0, arr)
+print(list(result2))

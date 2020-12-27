@@ -1,5 +1,5 @@
 class Node:
-    def __init__ (self, data):
+    def __init__(self, data):
         self.data = data
         self.next = None
 
@@ -26,5 +26,5 @@ n2.next = n3
 newNode = reverse(n1)
 
 while newNode:
-    print(newNode.data, end = "-->")
+    print(newNode.data, end="-->")
     newNode = newNode.next

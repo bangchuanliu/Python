@@ -17,6 +17,7 @@ class Course:
         for s in self.students:
             print(s.name + " " + str(s.age))
 
+
 s1 = Student("kevin", 22)
 s2 = Student("peter", 20)
 
@@ -24,4 +25,3 @@ c = Course("cs", 10)
 c.add_student(s1)
 c.add_student(s2)
 c.print()
-# print(len(c.students))

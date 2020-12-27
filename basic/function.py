@@ -10,5 +10,6 @@ def main():
     mod2 = mod(base2, num2)
     print(mod1, mod2)
 
+
 if __name__ == "__main__":
-    main
+    main()
