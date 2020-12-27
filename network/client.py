@@ -9,12 +9,14 @@ LEN = 64
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(ADDR)
 
+
 def send_msg(msg):
     message = msg.encode(FORMAT)
     msg_length = len(message)
     send_length = str(msg_length).encode(FORMAT)
     send_length = b' ' * (LEN - len(send_length))
     client.send(send_length)
+    client.send(str(msg_length).encode(FORMAT))
     client.send(message)
 
 
